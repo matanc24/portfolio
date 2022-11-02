@@ -1,0 +1,121 @@
+@mixin section-1 {
+  .section-1 {
+    @include large-screen-padding;
+    padding-bottom: 250px;
+
+    article {
+      display: grid;
+      grid-template-columns: 1fr;
+      height: clamp(250px, 50vh, 420px);
+      align-items: center;
+      max-width: 1500px;
+      margin: 0 auto;
+
+      .introduction {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 24px;
+        padding-right: 24px;
+        width: 100%;
+        height: 100%;
+        gap: 14px;
+
+        h2 {
+          font-size: clamp(2vh, 8rem, 5vw);
+
+          .my-name {
+            color: var(--accent-color);
+          }
+        }
+
+        z-index: 4;
+      }
+
+      .say-hi__container {
+        display: flex;
+        justify-content: flex-start;
+        justify-self: end;
+        width: 100%;
+        height: fit-content;
+        gap: 20px;
+      }
+      .say-hi {
+        margin-top: 50px;
+        @include btn;
+      }
+
+      aside {
+        position: relative;
+        justify-self: center;
+        grid-column: 2 / -1;
+        height: 100%;
+      }
+    }
+
+    .code-art__container__back,
+    .code-art__container__front {
+      width: 400px;
+      height: 422px;
+      @include osx-window;
+    }
+
+    .code-art__container__back {
+      transform: translate(30px, -50px);
+    }
+
+    .code-art__container__front {
+      position: absolute;
+      top: 50px;
+    }
+
+    .code-art__content__back {
+      @include code-art__content;
+    }
+    .code-art__content__front {
+      @include code-art__content;
+    }
+  }
+
+  // Text decor
+
+  .typewriter__caret {
+    height: inherit;
+    animation: blinker 0.8s linear infinite;
+    display: inline-block;
+    font-size: 1em;
+    @keyframes blinker {
+      50% {
+        opacity: 0;
+      }
+    }
+  }
+
+  // code-art text colors
+  .blue {
+    color: #04b2de;
+  }
+  .green {
+    color: #57a249;
+  }
+  .orange {
+    color: #ed8804;
+  }
+  .red {
+    color: #c5504a;
+  }
+  .yellow {
+    color: #cabf6a;
+  }
+  .gray {
+    color: #999999;
+  }
+  .purple {
+    color: #9951d4;
+  }
+
+  .code-art__base-color {
+    color: var(--code-art__base-color);
+  }
+}

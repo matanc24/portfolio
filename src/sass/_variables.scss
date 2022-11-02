@@ -1,0 +1,60 @@
+:root {
+  --background-color: #121212;
+  --background-lighter-color: #2b2b2b;
+  --background-lightest-color: #3b3b3b;
+  --accent-color: #d364ff;
+  --accent-color-transparent: rgba(255, 100, 255, 0.2);
+  --slider-background-color: rgba(255, 255, 255, 0.38);
+  --text-color-high-emphasis: rgba(255, 255, 255);
+  --text-color-medium-emphasis: rgba(255, 255, 255, 0.6);
+  --text-color-low-emphasis: rgba(255, 255, 255, 0.3);
+  --fixed-header-color: rgba(43, 43, 43, 0.5);
+  --introduction-window-color: rgba(43, 43, 43, 0.7);
+  --osx-window: #3b3b3b;
+  --osx-border-color: transparent;
+  --osx-dot-container-bottom-border-color: #000;
+  --inactive-dot: #606060;
+  --shadow: 0px 3px 22px 0px rgba(0, 0, 0, 0.7);
+  --code-art__base-color: #ffffffdc;
+  --caret-fill-color: #ffffffdc;
+  --lighter-accent-color: rgba(255, 100, 255, 0.2);
+  --about-me-h-color: #d364ff;
+  --about-me-p-color: rgba(255, 255, 255, 0.8);
+  --call-to-action-text-color: #444;
+  --call-to-action-hover-text-color: #d364ff;
+  --diagonal-color: #1b1b1b;
+  --odd-sibling-color: #232323;
+  --nav-child-hover-color: #757575;
+
+  // The following variables do not mutate
+  --error-color: rgb(239, 35, 60, 0.8);
+  // Variables are changed into these values using JavaScript (light theme activation)
+
+  // --background-color: #fff;
+  // --background-lighter-color: #fff;
+  // --background-lightest-color: #fff;
+  --aaccent-color: #732673;
+  --saccent-color: #4726732e;
+  --accents-color-transparent: rgba(46, 22, 97, 0.168);
+  // --slider-background-color: #ddd;
+  // --text-color-high-emphasis: rgba(4, 4, 4, 0.9);
+  // --text-color-medium-emphasis: rgba(255, 255, 255, 0.6);
+  // --text-color-low-emphasis: rgba(255, 255, 255, 0.38);
+  // --fixed-header-color: rgba(247, 247, 248, 0.5);
+  // --osx-window: #f0f0f0;
+  // --osx-border-color: #ccc;
+  // --dot--inactive: #ddd;
+  // --osx-dot-container-bottom-border-color: #ddd;
+  // --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  // --code-art__base-color: var(--text-color-high-emphasis);
+  // --caret-fill-color: #ffffffdc;
+  // --lighter-accent-color: rgba(100, 255, 219, 0.2);
+  // --about-me-h-color: var(--accent-color);
+  // --about-me-p-color: rgba(255, 255, 255, 0.8);
+  // --call-to-action-text-color: #fff;
+  // --call-to-action-text-color : #fff;
+  // --call-to-action-hover-text-color : #444;
+  // --diagonal-color: #f7f7f8;
+  // --odd-sibling-color: #f7f7f8;
+  // --nav-child-hover-color: #d8d8d8;
+}

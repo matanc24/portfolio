@@ -1,0 +1,71 @@
+@mixin section-2 {
+  .section-2 {
+    @include large-screen-padding;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    article {
+      grid-column: 2/ -1;
+      justify-self: end;
+      padding: 32px;
+      width: 100%;
+      max-width: 700px;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      background-color: var(--lighter-accent-color);
+      gap: 42px;
+      transform: translateX(clamp(80px, 10vw, 120px));
+      z-index: 200;
+    }
+
+    img {
+      position: absolute;
+      border-radius: 15px;
+      transform: translate(-60px, -60px);
+      width: auto;
+      height: 380px;
+      box-shadow: var(--shadow);
+      border-radius: 15px;
+      z-index: 300;
+    }
+
+    .me {
+      // Used for lazy loading. Will be changed to "unset" by JS. In ScrollView.js
+      display: none;
+    }
+
+    .about-me {
+      display: grid;
+      grid-template-columns: 0.1fr 1fr;
+      gap: 14px;
+
+      .about-me__text {
+        grid-column: 2 / -1;
+        display: flex;
+        gap: 14px;
+        flex-direction: column;
+      }
+
+      p {
+        color: var(--about-me-p-color);
+      }
+
+      h2 {
+        font-size: 2rem;
+        font-weight: 400;
+        color: var(--about-me-h-color);
+      }
+    }
+    @include diagonal-background;
+
+    @media (max-width: 1048px) and (min-width: 950px) {
+      article {
+        max-width: 620px !important;
+      }
+    }
+  }
+}

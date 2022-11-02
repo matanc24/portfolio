@@ -1,0 +1,159 @@
+// Assets
+@import 'welcome-screen';
+@import 'mixins';
+@import 'variables';
+@import 'header/header';
+@import 'small-screen-menu';
+@import 'main-content';
+@import 'footer';
+@import 'modals';
+@import 'responsive_design_mixins/large-screen-responsive';
+@import 'responsive_design_mixins/medium-screen-responsive';
+@import 'responsive_design_mixins/small-screen-responsive';
+@import 'cookie-message';
+
+@font-face {
+  font-family: 'Consolas';
+  src: url('../../fonts/consola.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--diagonal-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color-transparent);
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--text-color-high-emphasis);
+  background: var(--accent-color-transparent);
+}
+
+::selection {
+  color: var(--text-color-high-emphasis);
+  background: var(--accent-color-transparent);
+}
+body {
+  p {
+    font-weight: 300;
+    line-height: 1.2;
+    font-size: 1.2rem;
+  }
+  background-color: var(--background-color);
+  color: var(--text-color-high-emphasis);
+  -webkit-tap-highlight-color: transparent;
+}
+
+@include header;
+@include main-content;
+@include footer;
+@include modal;
+
+.o {
+  font-family: Inter, sans-serif;
+  stroke: var(--accent-color);
+  fill: var(--accent-color);
+  width: 5rem;
+  height: 5rem;
+  transform: rotate(70deg);
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.for-main__header-active {
+  margin-top: 50px;
+}
+
+.redir__icon {
+  width: 22px;
+  height: 22px;
+  stroke-width: 1px;
+}
+// Scroll reveal
+.section {
+  position: relative;
+  opacity: 0;
+  transition: transform 0.8s ease-out, opacity 0.8s ease 0.2s;
+  transform: translateY(10%);
+}
+
+.reveal {
+  opacity: 1;
+  transform: unset;
+}
+
+.loading__icon {
+  position: absolute;
+  width: 82px;
+  height: 82px;
+  fill: var(--accent-color);
+  padding: 10px;
+  animation: loading 1.2s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  z-index: 201;
+
+  @keyframes loading {
+    0% {
+      transform: translateX(-20%);
+    }
+    50% {
+      transform: translateX(20%);
+    }
+    100% {
+      transform: translateX(-20%);
+    }
+  }
+}
+
+.overlay__active {
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  &::after {
+    opacity: 1;
+    transform: unset;
+  }
+}
+
+.section-4 {
+  .loading__icon {
+    top: calc(20%);
+    left: calc(50% - 41px);
+  }
+}
+
+// Responsive design
+@include medium-screen-responsive;
+@include small-screen-responsive;

@@ -1,0 +1,157 @@
+@mixin flex-spaced-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin diagonal-background {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 130%;
+    background-color: var(--diagonal-color);
+    transform: rotate(4deg);
+    z-index: -10;
+  }
+}
+
+@mixin vertical-banners__common-styles {
+  position: fixed;
+  bottom: 14vh;
+  transition: all 1s cubic-bezier(0.68, -0.55, 0.27, 1.55), color 0s;
+}
+
+@mixin shake-animation {
+  & {
+    animation: shake 0.3s ease;
+
+    @keyframes shake {
+      0% {
+        transform: translateX(10px);
+      }
+      25% {
+        transform: translateX(-10px);
+      }
+
+      50% {
+        transform: translateX(20px);
+      }
+
+      75% {
+        transform: translateX(-10px);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+@mixin osx-window {
+  & {
+    background-color: var(--background-lighter-color);
+    border-radius: 4px;
+    line-break: auto;
+    user-select: none;
+    border: solid 1px var(--osx-border-color);
+    box-shadow: var(--shadow);
+    .osx-bar {
+      width: 100%;
+      height: 30px;
+      background-color: var(--background-lightest-color);
+      border-top-right-radius: 4px;
+      border-top-left-radius: 4px;
+      border-bottom: solid 1px var(--osx-dot-container-bottom-border-color);
+
+      .osx-bar__dots__container {
+        display: flex;
+        gap: 10px;
+        height: 100%;
+        align-items: center;
+        padding: 12px;
+        background-color: var(--osx-window);
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+      }
+
+      .osx-bar__dots {
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+      }
+
+      .red-dot {
+        background-color: #fd5e59;
+      }
+      .yellow-dot {
+        background-color: #ffbb3b;
+      }
+      .green-dot {
+        background-color: #34c748;
+      }
+
+      .inactive-dot {
+        background-color: var(--inactive-dot);
+      }
+    }
+  }
+}
+
+@mixin code-art__content {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  padding: 10px;
+  font-family: "Consolas";
+  font-size: 13px;
+  line-height: 1.2;
+  pre {
+    white-space: pre-wrap;
+  }
+}
+
+@mixin overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.2s ease-in, backdrop-filter 0.2s ease-in,
+    background-color 0.2s ease-in;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+}
+
+@mixin btn-hover-active {
+  background-color: var(--accent-color-transparent);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+@mixin btn {
+  transition: transform 0.1s ease;
+  height: fit-content;
+  width: fit-content;
+  padding: 10px 25px;
+  font-family: inherit;
+  font-size: 1rem;
+  border: solid 1px var(--accent-color);
+  background-color: transparent;
+  color: var(--accent-color);
+  border-radius: 4px;
+  transition: transform 0.12s ease, background-color 0.12s ease;
+
+  // If hovering and pointer. Solves sticky hover problem in touch devices.
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @include btn-hover-active;
+    }
+  }
+  &:active {
+    @include btn-hover-active;
+    transform: unset;
+  }
+}
