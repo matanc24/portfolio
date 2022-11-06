@@ -137,19 +137,6 @@ const controlFooterLinks = new ModalControl(),
   controlNavigation = new ModalControl(),
   controlSmallScreenMenu = new ModalControl();
 
-const controlCookieMessage = {
-  updateCanShowCookieMessage(bool) {
-    bool
-      ? localStorage.removeItem('COOKIE_READ')
-      : localStorage.setItem('COOKIE_READ', true);
-  },
-
-  canShowCookieMessage() {
-    if (localStorage.getItem('COOKIE_READ')) return false;
-    return true;
-  },
-};
-
 const initApp = async function () {
   SmallScreenMenu.init(controlSmallScreenMenu);
   HeaderView.init(controlNavigation);
