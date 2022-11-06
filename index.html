@@ -9,6 +9,10 @@
     <link rel="icon" href="./favicons/fav-icon-dark.png" />
 
     <!-- Fonts -->
+    <script
+      src="https://kit.fontawesome.com/d012b66153.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -96,23 +100,6 @@
           >Projects</label
         >
 
-        <!-- <a
-          href="tel:+19292391161"
-          class="mall-screen-menu__label small-screen-menu__label__call"
-          >Give me a call</a
-        > -->
-        <label class="mall-screen-menu__label small-screen-menu__label__dm"
-          >Send direct message</label
-        >
-
-        <label
-          class="small-screen-menu__label small-screen-menu__label__contact"
-          >Other contact information</label
-        >
-        <label
-          class="small-screen-menu__label small-screen-menu__label__resources"
-          >My favorite learning resources</label
-        >
         <label class="small-screen-menu__label small-screen-menu__label__resume"
           >View my resume</label
         >
@@ -479,14 +466,15 @@
         <div class="osx-bar">
           <div class="osx-bar__dots__container">
             <div
-              class="osx-modal__btn osx-modal__resume__btn__close osx-bar__dots red-dot modal-dot"
+              class="osx-modal__btn osx-modal__resume__btn__maximize osx-bar__dots modal-dot"
             >
-              &times;
+              <i class="fa-solid fa-expand"></i>
             </div>
-
             <div
-              class="osx-modal__btn osx-modal__resume__btn__maximize osx-bar__dots green-dot modal-dot"
-            ></div>
+              class="osx-modal__btn osx-modal__resume__btn__close osx-bar__dots modal-dot"
+            >
+              <i class="fa-solid fa-x"></i>
+            </div>
           </div>
         </div>
         <!-- PDF Viewer (pdf.js library injects iframe here) -->
@@ -528,14 +516,6 @@
             </div>
 
             <div class="footer__link__subgroup">
-              <div class="footer__link__wrapper">
-                <div class="footer-link__item footer-link__item__contact-info">
-                  <svg class="footer__icon footer__icon__arrow-up">
-                    <use href="./img/icons.svg#book"></use>
-                  </svg>
-                  <label class="footer-link">Open contact info</label>
-                </div>
-              </div>
               <div class="footer__link__wrapper">
                 <div class="footer-link__item footer-link__item__resume">
                   <svg class="footer__icon footer__icon__arrow-up">

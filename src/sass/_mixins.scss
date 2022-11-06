@@ -5,7 +5,7 @@
 
 @mixin diagonal-background {
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     bottom: 0;
@@ -67,33 +67,11 @@
 
       .osx-bar__dots__container {
         display: flex;
-        gap: 10px;
+        gap: 15px;
         height: 100%;
         align-items: center;
+        justify-content: flex-end;
         padding: 12px;
-        background-color: var(--osx-window);
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
-      }
-
-      .osx-bar__dots {
-        height: 12px;
-        width: 12px;
-        border-radius: 50%;
-      }
-
-      .red-dot {
-        background-color: #fd5e59;
-      }
-      .yellow-dot {
-        background-color: #ffbb3b;
-      }
-      .green-dot {
-        background-color: #34c748;
-      }
-
-      .inactive-dot {
-        background-color: var(--inactive-dot);
       }
     }
   }
@@ -104,7 +82,7 @@
   height: 100%;
   background-color: transparent;
   padding: 10px;
-  font-family: "Consolas";
+  font-family: 'Consolas';
   font-size: 13px;
   line-height: 1.2;
   pre {

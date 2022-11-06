@@ -7,6 +7,7 @@ class FooterView extends Views {
 
     links.addEventListener('click', (e) => {
       if (e.target.closest('.footer-link__item__to-top')) handle.scrollToTop();
+      if (e.target.closest('.footer-link__item__resume')) handle.openResume();
     });
   }
 }
