@@ -427,7 +427,7 @@ body p {
 header {
   font-size: 22px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   top: 0;
   padding: 10px 20px 10px 10px;
   height: 50px;
@@ -1969,6 +1969,7 @@ body .overlay .osx-modal__maximize .contact-me__form__message {
     padding-top: 30px;
   }
   header {
+    justify-content: space-between;
     padding-right: 10px;
   }
   header .hamburger-x__wrapper {

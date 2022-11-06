@@ -11,6 +11,7 @@
     ////////////// HEADER //////////////////
     // Hide nav component
     header {
+      justify-content: space-between;
       padding-right: 10px;
       .hamburger-x__wrapper {
         display: block;
