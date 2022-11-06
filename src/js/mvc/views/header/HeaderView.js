@@ -1,25 +1,24 @@
-import { isTouchScreendevice } from "../../../helpers";
-import Views from "../Views";
-import { throttle } from "lodash";
+import { isTouchScreendevice } from '../../../helpers';
+import Views from '../Views';
+import { throttle } from 'lodash';
 class Header extends Views {
-  navElement = document.querySelector("nav");
+  navElement = document.querySelector('nav');
   navChildren = Array.from(this.navElement.children);
   #lastScrolled = 0;
 
   init(handler) {
     this.navChildren.forEach((child) => {
-      child.addEventListener("mouseenter", (e) => {
+      child.addEventListener('mouseenter', (e) => {
         this.navOnMouseEnter(e);
       });
     });
 
-    this.navElement.addEventListener("click", (e) => {
-      if (e.target.closest(".nav-lbl__about-me"))
+    this.navElement.addEventListener('click', (e) => {
+      if (e.target.closest('.nav-lbl__about-me'))
         handler.scrollToElement(this.sections.at(1));
-      if (e.target.closest(".nav-lbl__projects"))
+      if (e.target.closest('.nav-lbl__projects'))
         handler.scrollToElement(this.sections.at(3));
-      if (e.target.closest(".nav-lbl__contact")) handler.openContactInfo();
-      if (e.target.closest(".nav-lbl__resume")) handler.openResume();
+      if (e.target.closest('.nav-lbl__resume')) handler.openResume();
     });
 
     // Creates a throttled function that only invokes func at most once per every wait milliseconds. The throttled function comes with a cancel method to cancel delayed func invocations and a flush method to immediately invoke them. Provide options to indicate whether func should be invoked on the leading and/or trailing edge of the wait timeout. The func is invoked with the last arguments provided to the throttled function. Subsequent calls to the throttled function return the result of the last func invocation.
@@ -41,28 +40,28 @@ class Header extends Views {
       500,
       { leading: false, trailing: true }
     ).bind(this);
-    document.addEventListener("scroll", showOrHide);
+    document.addEventListener('scroll', showOrHide);
   }
 
   // Controls nav hovering
   navOnMouseEnter(e) {
     if (isTouchScreendevice()) return;
     const reset = (element) => {
-      element.style.color = "var(--text-color-high-emphasis)";
-      element.style.filter = "none";
+      element.style.color = 'var(--text-color-high-emphasis)';
+      element.style.filter = 'none';
     };
 
     // Add styles to all children elements of nav
     this.navChildren.forEach((child) => {
-      child.style.filter = "blur(2px)";
-      child.style.color = "var(--nav-child-hover-color)";
+      child.style.filter = 'blur(2px)';
+      child.style.color = 'var(--nav-child-hover-color)';
     });
 
     // Remove styles on target element
-    e.target.style.color = "var(--accent-color)";
-    e.target.style.filter = "none";
+    e.target.style.color = 'var(--accent-color)';
+    e.target.style.filter = 'none';
 
-    this.navElement.addEventListener("mouseleave", () => {
+    this.navElement.addEventListener('mouseleave', () => {
       this.navChildren.forEach((child) => {
         // Remove all styles when mouse leaves nav bar
         reset(child);
@@ -71,27 +70,27 @@ class Header extends Views {
   }
 
   fix() {
-    if (this.header.classList.contains("fixed-header")) return;
+    if (this.header.classList.contains('fixed-header')) return;
     // 1) Add offset
-    this.header.classList.add("fixed-header-offset");
+    this.header.classList.add('fixed-header-offset');
     setTimeout(() => {
       // 2) Add body margin and Add fixed-header after transition
-      document.querySelector("body").style.marginTop = "50px";
-      this.header.classList.add("fixed-header");
+      document.querySelector('body').style.marginTop = '50px';
+      this.header.classList.add('fixed-header');
       // 3) Remove offset
-      this.header.classList.remove("fixed-header-offset");
+      this.header.classList.remove('fixed-header-offset');
     }, 420);
   }
 
   unfix() {
-    if (!this.header.classList.contains("fixed-header")) return;
+    if (!this.header.classList.contains('fixed-header')) return;
     // 1) Add offset
-    this.header.classList.add("fixed-header-offset");
+    this.header.classList.add('fixed-header-offset');
     setTimeout(() => {
-      document.querySelector("body").style.marginTop = "0";
-      this.header.classList.remove("fixed-header");
+      document.querySelector('body').style.marginTop = '0';
+      this.header.classList.remove('fixed-header');
       // 2) Remove offset
-      this.header.classList.remove("fixed-header-offset");
+      this.header.classList.remove('fixed-header-offset');
     }, 420);
   }
 }

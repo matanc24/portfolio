@@ -72,9 +72,6 @@
   --odd-sibling-color: #232323;
   --nav-child-hover-color: #757575;
   --error-color: rgb(239, 35, 60, 0.8);
-  --aaccent-color: #732673;
-  --saccent-color: #4726732e;
-  --accents-color-transparent: rgba(46, 22, 97, 0.168);
 }
 
 .small-screen-menu__overlay {

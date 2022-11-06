@@ -2,7 +2,6 @@ import { lightTheme } from './model.js';
 import LightThemeView from './views/UI Themes/LightThemeView.js';
 import HeaderView from './views/header/HeaderView.js';
 import MenuView from './views/header/MenuView.js';
-import Typewrite from './views/Typewrite.js';
 import Slider from './views/Slider.js';
 import { AJAX_CALL_TIMEOUT_SECONDS, FORM_API, SCRIPT } from '../config.js';
 import FooterView from './views/FooterView.js';
@@ -13,7 +12,6 @@ import LazyLoading from './views/LazyLoading.js';
 import SmallScreenMenu from './views/header/SmallScreenMenu.js';
 import { scrollToElement } from '../helpers.js';
 import PdfViewerView from './views/PdfViewerView.js';
-import CookieMessage from './views/CookieMessage.js';
 
 const controlTheme = async function () {
   lightTheme.isActive = !lightTheme.isActive;
