@@ -1,5 +1,6 @@
 // These imports are resolved by vite to the relative path after minification
 
+import sneakersUrl from '../../img/section-4/sneakers.png';
 import fantasyUrl from '../../img/section-4/fantasy.png';
 import forkifyUrl from '../../img/section-4/forkify.png';
 import githubUsersUrl from '../../img/section-4/github.png';
@@ -312,6 +313,11 @@ export const WINDOW_MARKUP = {
 
 // Images markup must be in the same order as they are supposed to appear.
 export const PROJECT_IMAGES_MARKUP = [
+  `<img
+  class="project-img"
+  src="${sneakersUrl}"
+  alt="Project screenshots"
+/>`,
   `<img
   class="project-img"
   src="${fantasyUrl}"
