@@ -160,12 +160,13 @@ setTimeout(() => {
       'Front-End Developer',
       'Gym Addict',
       'Sports Fan',
-      'Rocket League Player',
+      'Avid Reader',
+      'Gamer',
     ],
     loop: true,
     autoStart: true,
   });
-}, 1700);
+}, 1200);
 // const initializeCore = function () {
 //   setTimeout(() => {
 //   }, 4400);
