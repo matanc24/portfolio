@@ -169,11 +169,6 @@
         background-color: rgba(247, 222, 30, 0.5);
       }
     }
-    // .skill-card__lightroom {
-    //   &::before {
-    //     background-color: rgba(197, 202, 233, 0.5);
-    //   }
-    // }
 
     .skill-card__npm {
       &::before {
@@ -185,14 +180,25 @@
         background-color: rgba(248, 113, 113, 0.5);
       }
     }
-    // .skill-card__photoshop {
-    //   &::before {
-    //     background-color: rgba(3, 168, 244, 0.5);
-    //   }
-    // }
+
     .skill-card__reactjs {
       &::before {
         background-color: rgba(0, 217, 255, 0.5);
+      }
+    }
+    .skill-card__nodejs {
+      &::before {
+        background-color: rgba(116, 196, 28, 0.5);
+      }
+    }
+    .skill-card__mongodb {
+      &::before {
+        background-color: rgba(136, 189, 131, 0.5);
+      }
+    }
+    .skill-card__postgresql {
+      &::before {
+        background-color: rgba(52, 100, 147, 0.5);
       }
     }
     .skill-card__sass {
