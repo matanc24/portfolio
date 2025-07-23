@@ -157,7 +157,7 @@ var app = document.getElementById('autoWrite');
 setTimeout(() => {
   var typewriter = new Typewriter(app, {
     strings: [
-      'Front-End Developer',
+      'Technical Solutions & Support Engineer',
       'Gym Addict',
       'Sports Fan',
       'Avid Reader',
